@@ -15,8 +15,8 @@ const Home = () => {
   };
 
   return (
-    <View>
-      <Text style={styles.header}>Resto Home page</Text>
+    <View style={{flex:1}}>
+      <Text style={styles.header}>JAGRUTI Resto Search</Text>
 
       <SearchBar
         term={term}
@@ -26,7 +26,7 @@ const Home = () => {
           searchApi(term);
         }}
       />
-      <Text>{term}</Text>
+      {/* <Text>{term}</Text> */}
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       {/* <Text>We have found [{results.length}] results.</Text> */}
       <ScrollView>
@@ -49,7 +49,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   header: {
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: "bold",
     textAlign: "center",
     textDecorationLine: "underline",
